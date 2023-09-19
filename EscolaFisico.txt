@@ -32,3 +32,59 @@ insert into aluno values ( 3001, 'Godofredo Henrique', '2000-03-15', '123.456.78
 
 insert into aluno values ( null, 'Josefina Winter', '1945-02-10', '123.456.789-02', 'Clenisbaldo Winter', null );
 
+insert into aluno values ( null, 'Ana Carolina', '2001-09-11', '677.423.331-09', 'Celsio Portioli', 'ACKamikaze@gmail.com' );
+
+insert into aluno ( matricula, nome, nascimento, cpf, responsavel, email ) values ( null, 'Elias Sherman', '1995-03-02', '123.456.789-05', 'John Sherman', 'es@email.com' );
+
+insert into aluno ( nome, cpf, responsavel ) values ( 'Waldiney Mouse', '123.456.789-06', 'Wesley Keyboard' );
+
+insert into aluno ( cpf, matricula, nome, responsavel, email ) values ( '123.456.789-07', null, 'Genivaldo Williams', 'Clotilde Williams', 'gw@gmail.com' );
+
+insert into turma values ( 2023080, 'M', 'Técnico de Informática' );
+
+insert into turma values ( 2023090, 'T', 'Técnico em Comunicação Visual' );
+Query OK, 1 row affected (0.00 sec)
+
+insert into estuda values ( 7501, 3001, 2023090 );
+
+insert into estuda values ( null, 3005, 2023080 );
+
+insert into estuda values ( null, 3003, 2023090 );
+
+insert into estuda values ( null, 3006, 2023080 );
+
+insert into estuda values ( null, 3007, 2023080 );
+
+insert into estuda values ( null, 3004, 2023090 );
+
+insert into estuda values ( null, 3007, 2023090 );
+
+insert into disciplina values ( 01, 'Programação' );
+
+insert into disciplina values ( null, 'Redes' );
+
+insert into disciplina values ( null, 'Tratamento de Imagem' );
+
+insert into professor values ( 2001, 'Sérgio', 'Professor de Programação' );
+
+insert into professor values ( null, 'Vicente', 'Professor de Redes' );
+
+insert into professor values ( null, 'Flávia', 'Professor de T. de Imagem' );
+
+insert into possui values ( 101, 1, 2023080 );
+
+insert into possui values ( null, 2, 2023080 );
+
+insert into possui values ( null, 3, 2023080 );
+
+insert into possui values ( null, 1, 2023090 );
+
+insert into possui values ( null, 2, 2023090 );
+
+insert into possui values ( null, 3, 2023090 );
+
+insert into leciona values ( 501, 1, 2001 );
+
+insert into leciona values ( null, 2, 2002 );
+
+insert into leciona values ( null, 3, 2003 );

@@ -14,3 +14,19 @@ alter table carro change modelo nome_modelo varchar(50) not null;
 
 alter table carro drop cor;
 
+insert into carro values ( 101, 'VW', 'Gol', 'AHJ7341' );
+
+insert into carro values ( null, 'FIAT', 'Uno', 'TMV6670' );
+
+insert into carro values ( null, 'Ford', 'Ka', 'GOR5201' );
+
+insert into carro values ( null, 'Toyota', 'Corolla', 'MNG3378' );
+
+insert into carro values ( null, 'Honda', 'Civic', 'LPD1209' );
+
+update carro set fabricante = 'Volkswagen' where idVeiculo = 101;
+
+update carro set nome_modelo = 'Polo', placa = 'AVF3400' where idVeiculo = 101;
+
+delete from carro where idVeiculo = 102;
+

@@ -88,3 +88,41 @@ insert into leciona values ( 501, 1, 2001 );
 insert into leciona values ( null, 2, 2002 );
 
 insert into leciona values ( null, 3, 2003 );
+
+insert into disciplina values ( null, 'Lógica de Programação' );
+
+insert into professor values ( null, 'Jefferson Brandão', 'Professor de L. de Programação' );
+
+insert into possui values ( null, 4, 2023080 );
+
+insert into leciona values ( null, 4, 2004 );
+
+update professor set nome = 'Vicente Orsino' where matricula = 2002;
+
+update aluno set nascimento = '2002-01-07' where matricula = 3006;
+
+update aluno set nascimento = '2002-01-07' where matricula = 3007;
+
+alter table professor add email varchar(80) after nome;
+
+update professor set email = 'SG@gmail.com' where matricula = 2001;
+
+update professor set email = 'VicO@gmail.com' where matricula = 2002;
+
+update professor set email = 'Flafla@gmail.com' where matricula = 2003;
+
+update professor set email = 'JeffBD@gmail.com' where matricula = 2004;
+
+insert into turma values ( 20223100, 'M', 'Técnico de Comunicação Visual' );
+
+insert into possui values ( null, 1, 20223100 );
+
+insert into possui values ( null, 2, 20223100 );
+
+insert into possui values ( null, 3, 20223100 );
+
+insert into aluno values ( null, 'Judite Presley', '1998-04-04', '333.890.220-09', 'Elvis Presley', 'Judiity@hotmail.com' );
+
+insert into estuda values ( null, 3008, 20223100 );
+
+update turma set definicao = 'Programação Python' where numero = 2023080;

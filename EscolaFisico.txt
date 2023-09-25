@@ -126,3 +126,81 @@ insert into aluno values ( null, 'Judite Presley', '1998-04-04', '333.890.220-09
 insert into estuda values ( null, 3008, 20223100 );
 
 update turma set definicao = 'Programação Python' where numero = 2023080;
+
+insert into aluno values (null,'Renata Mouse', '2005-03-15', '123.456.789-90', 'Wesley Keyboard', 'RM@email.com' );
+
+update aluno set nome = 'Renata Mouse Silva' where matricula = 3009;
+
+insert into aluno values (null, 'Mouse Sherman Williams', '2015-09-12', '123.456.789-10', 'Cpu Sherman', null );
+
+alter table professor add dependentes int;
+
+update professor set dependentes = 3 where nome = 'Sérgio';
+
+update professor set dependentes = 0 where matricula = '2002';
+
+update professor set dependentes = 2 where matricula = '2004';
+
+select * from aluno;
+
+select * from aluno where nascimento = '2002-01-07';
+
+select matricula, nome from aluno;
+
+select matricula, nome from aluno order by nome;
+
+select matricula, nome, responsavel from aluno order by responsavel desc;
+
+select * from aluno where matricula < 3008;
+
+select * from aluno where matricula > 3004 and matricula < 3008;
+
+select * from aluno where matricula <= 3004 or matricula >= 3007;
+
+select * from aluno where matricula <= 3004 or matricula >= 3007 order by nascimento;
+
+select * from aluno where email is null;
+
+select * from aluno where not email is null;
+
+select * from aluno where matricula between 3004 and 3008;
+
+select * from aluno where matricula in(3003, 3006, 3007);
+
+select * from aluno where not matricula not in(3003, 3006, 3007);
+
+select * from aluno where nome like 'G%';
+
+select * from aluno where nome like '%e';
+
+select * from aluno where nome like '_o';
+
+select * from aluno where nome like '_o%';
+
+select * from aluno where nome like '%a%';
+
+select * from aluno where nome like '%Mouse';
+
+select avg(dependentes) from professor;
+
+select count(dependentes) from professor where dependentes = 3;
+
+select sum(dependentes) from professor;
+
+select max(dependentes) from professor;
+
+select min(dependentes) from professor;
+
+select matricula, nome, nascimento, monthname(nascimento) from aluno;
+
+select concat('Nome do aluno: ', nome) from aluno;
+
+select concat('Nome do aluno: ', nome, ' - E-mail: ', email) from aluno where email is not null;
+
+select upper(nome) from aluno;
+
+select nome, lower(email) from aluno;
+
+select aluno.nome, turma.definicao, turma.turno from aluno, turma, estuda where aluno.matricula = estuda.fk_aluno_matricula and fk_turma_numero = turma.numero order by aluno.nome;
+
+select aluno.nome, disciplina.nome from aluno, estuda, turma, possui, disciplina where aluno.matricula = estuda.fk_aluno_matricula and estuda.fk_turma_numero = turma.numero and turma.numero = possui.fk_turma_numero and possui.fk_disciplina_cod_disciplina = disciplina.cod_disciplina;
